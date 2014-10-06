@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* TodosIndex: Event Handlers and Helpersss .js*/
+/* TodosCount: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.TodosIndex.events({
+Template.TodosCount.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,25 +11,25 @@ Template.TodosIndex.events({
    */
 });
 
-Template.TodosIndex.helpers({
-	items: function(){
-		return Todos.find({},{sort: {createdAt: -1}});
+Template.TodosCount.helpers({
+	CompletedCount: function(){
+		return Todos.find({is_done: true}).count();
 	},
-	isDoneClass: function(){
-		return this.is_done ? 'done' : '';
+	TotalCount: function(){
+		return Todos.find({}).count();
 	}
 });
 
 /*****************************************************************************/
-/* TodosIndex: Lifecycle Hooks */
+/* TodosCount: Lifecycle Hooks */
 /*****************************************************************************/
-Template.TodosIndex.created = function () {
+Template.TodosCount.created = function () {
 };
 
-Template.TodosIndex.rendered = function () {
+Template.TodosCount.rendered = function () {
 };
 
-Template.TodosIndex.destroyed = function () {
+Template.TodosCount.destroyed = function () {
 };
 
 

@@ -1,0 +1,15 @@
+
+<template name="CreateTodoItem">
+	<form class="create-todo">
+	    <legend>Legend</legend>
+	    <label>Todo</label>
+		{{#if currentUser}}
+	    	<input type="text" placeholder="create todo..."/>
+		{{else}}
+			<input type="text" readonly placeholder="login to create todo"/>
+		{{/if}}
+	    <span class="help-block">Example block-level help text here.</span>
+	    <button type="submit" class="btn">Submit</button>
+	</form>
+</template>
+

@@ -1,5 +1,18 @@
 
 <template name="TodosIndex">
-  client/views/todos/todos_index/todos_index.html
+   <div class="todos-panel">
+  	 {{> CreateTodoItem}}
+  	 <ul class="todos-list">
+  		{{#each items}}
+  		 	<li class="todo-item {{isDoneClass}}">
+  				{{> TodoItem}}
+  			</li>
+  		{{else}}
+  			No todos yet.
+  		{{/each}}
+  	</ul>
+  	{{> TodosCount}}
+  </div>
+  
 </template>
 
