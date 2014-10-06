@@ -1,4 +1,7 @@
 TodosDetailController = RouteController.extend({
+  
+  layoutTemplate: 'NoBreadcrumbs',
+	
   waitOn: function () {
 	  Meteor.subscribe('todos_detail', this.params._id);
   },
