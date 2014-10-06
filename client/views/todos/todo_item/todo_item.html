@@ -3,8 +3,11 @@
 <div class="done">
 	<input type="checkbox" name="is_done" {{isDoneChecked}} />
 </div>
-<div class="subject">
+<div class="subject todo-text done">
 	{{subject}}
+</div>
+<div class="action">
+	<a href="{{pathFor 'todos.detail' params=this}}">Details</a>
 </div>
 </template>
 
